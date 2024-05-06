@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    
+    $helloworld = "HelloWorld!!";
+    return view('home', compact("helloworld"));
+
+})->name('Home');
+
+Route::get("/nextPage", function() {
+
+    $helloworld = "HelloWorld!";
+    return view('nextPage', compact("helloworld"));
+
+})->name('SecondaryPage');
